@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Java EE 7 Dauphine</title>
+<meta name="author" content="Etudiant">
+
+<!-- JQuery -->
+<script type="text/javascript" src="resource/js/jquery-1.10.2.min.js"></script>
+
+<!-- Les styles -->
+
+
+
+
+
+</head>
+
+
+<body>
+<div id="Accueil">	 
+	   <fieldset>
+	       <legend>Accueil</legend> <!-- Titre du fieldset --> 
+	
+	       <label for="pseudo">Pseudonyme :</label>
+	       <input type="text" name="pseudo" id="pseudo" />
+	
+	       <label for="salle">Salle: </label>
+	       <select name="salle" id="salle">
+	           <option value="salle1">Salle 1</option>
+	           <option value="salle2">Salle 2</option>
+	           <option value="salle3">Salle 3</option>
+	           <option value="salle4">Salle 4</option>
+	       </select>	
+	       <br ><br >
+		 	<button id="buttonShowMsg">Enter</button>
+	   </fieldset>
+</div>
+
+<div id="Salle" hidden="true">
+	   <fieldset>
+	       <legend id="pseudoSalle">Pseudo@salleDeClass</legend> <!-- Titre du fieldset -->
+	 		<textarea rows="5" cols="70" disabled="true"></textarea>
+	       <p>
+	        <label for="msg">Message: </label><br />
+       		<textarea rows="3" cols="70" name="msg" id="msg"></textarea>	     
+	       </p>
+		   <button id="submitMsg" >Envoyer</button>
+		   <button id="buttonHideMsg" >Sortir</button>
+	   </fieldset>	
+</div>
+
+
+</body>
+
+
+
+
+
+<!-- Le code JQuery -->
+<script>
+$('#buttonShowMsg').click(function(){
+	$("#pseudoSalle").html($("#pseudo").val()+"@"+$("#salle").val());
+	//alert($("#pseudo").val());
+	$("#Salle").show();
+});	
+
+$('#buttonHideMsg').click(function(){
+	$("#Salle").hide();
+});	
+</script>
+
+
+
+</html>
