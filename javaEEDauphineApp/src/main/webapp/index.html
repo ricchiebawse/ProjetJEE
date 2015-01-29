@@ -7,50 +7,61 @@
 
 <!-- JQuery -->
 <script type="text/javascript" src="resource/js/jquery-1.10.2.min.js"></script>
+<script src="resource/js/bootstrap.min.js"></script>
 
 <!-- Les styles -->
-
-
-
+<link href="resource/css/bootstrap.min.css" rel="stylesheet">
+<link href="resource/css/bootstrap-theme.min.css" rel="stylesheet">
 
 
 </head>
 
 
 <body>
-<div id="Accueil">	 
-	   <fieldset>
-	       <legend>Accueil</legend> <!-- Titre du fieldset --> 
-	
-	       <label for="pseudo">Pseudonyme :</label>
-	       <input type="text" name="pseudo" id="pseudo" />
-	
-	       <label for="salle">Salle: </label>
-	       <select name="salle" id="salle">
-	           <option value="salle1">Salle 1</option>
-	           <option value="salle2">Salle 2</option>
-	           <option value="salle3">Salle 3</option>
-	           <option value="salle4">Salle 4</option>
-	       </select>	
-	       <br ><br >
-		 	<button id="buttonShowMsg">Enter</button>
-	   </fieldset>
-</div>
+	<div class="container">
+		<div id="Accueil">
+			<form>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Accueil</h3>
+					</div>
+					<div class="panel-body">
+						<label for="pseudo">Pseudonyme :</label> <input type="text"
+							name="pseudo" id="pseudo" /> <label for="salle">Salle: </label>
+						<select name="salle" id="salle">
+							<option value="salle1">Salle 1</option>
+							<option value="salle2">Salle 2</option>
+							<option value="salle3">Salle 3</option>
+							<option value="salle4">Salle 4</option>
+						</select> <br> <br>
 
-<div id="Salle" hidden="true">
-	   <fieldset>
-	       <legend id="pseudoSalle">Pseudo@salleDeClass</legend> <!-- Titre du fieldset -->
-	 		<textarea rows="5" cols="70" disabled="true"></textarea>
-	       <p>
-	        <label for="msg">Message: </label><br />
-       		<textarea rows="3" cols="70" name="msg" id="msg"></textarea>	     
-	       </p>
-		   <button id="submitMsg" >Envoyer</button>
-		   <button id="buttonHideMsg" >Sortir</button>
-	   </fieldset>	
-</div>
+						<button type="button" class="btn btn-success" id="buttonShowMsg">Enter</button>
+					</div>
+				</div>
+			</form>
+		</div>
 
-
+		<div id="Salle" hidden="true">
+			<form>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title" id="pseudoSalle">Pseudo@salleDeClass</h3>
+					</div>
+					<div class="panel-body">
+						<table class="table table-condensed">
+							
+						</table>
+						<p>
+							<label for="msg">Message: </label><br />
+							<textarea class="form-control" rows="3" name="msg" id="msg"></textarea>
+						</p>
+						<button type="button" class="btn btn-success" id="submitMsg">Envoyer</button>
+						<button type="button" class="btn btn-danger" id="buttonHideMsg">Sortir</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 
 
